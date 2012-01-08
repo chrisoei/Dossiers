@@ -17,7 +17,7 @@ development:
 test:
   adapter: postgresql
   database: dossiers_test
-  username: postgres
+  username: chrisoei
   password:
   pool: 5
   timeout: 5000
