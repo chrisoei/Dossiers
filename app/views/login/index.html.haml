@@ -1,1 +1,8 @@
 %h2 Sign-in
+
+- semantic_form_for @user_session do |f|
+  - f.inputs do
+    = f.input :login
+    = f.input :password
+  = f.buttons
+

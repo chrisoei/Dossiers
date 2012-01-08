@@ -7,6 +7,8 @@ gem 'rails', '3.1.3'
 
 gem 'pg'
 gem 'haml'
+gem 'formtastic'
+gem 'authlogic'
 
 
 # Gems used only for assets and not required
