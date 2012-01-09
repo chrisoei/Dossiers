@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all.sort { |x,y| x.id <=> y.id }
+    @people = Person.order('id').all
 
     respond_to do |format|
       format.html # index.html.erb
