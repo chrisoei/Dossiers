@@ -5,4 +5,9 @@ class Person < ActiveRecord::Base
   accepts_nested_attributes_for :emails, :reject_if=>:all_blank
   accepts_nested_attributes_for :phone_numbers, :reject_if=>:all_blank
   accepts_nested_attributes_for :addresses, :reject_if=>:all_blank
+  
+  def name()
+    first_name + ' ' + last_name
+  end
+  
 end
