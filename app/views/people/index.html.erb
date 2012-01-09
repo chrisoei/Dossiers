@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>First name</th>
     <th>Middle name</th>
     <th>Last name</th>
@@ -17,6 +18,7 @@
 
 <% @people.each do |person| %>
   <tr>
+    <td><%= person.id %></td>
     <td><%= person.first_name %></td>
     <td><%= person.middle_name %></td>
     <td><%= person.last_name %></td>
