@@ -19,7 +19,7 @@ describe "the sign-in process" do
     fill_in 'Login', :with => 'johndoe'
     fill_in 'Password', :with => 'test123'
     click_button 'Login'
-    current_path.should == person_path
+    current_path.should == people_path
   end
 
 end
