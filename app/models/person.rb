@@ -5,6 +5,8 @@ class Person < ActiveRecord::Base
   accepts_nested_attributes_for :emails, :reject_if=>:all_blank
   accepts_nested_attributes_for :phone_numbers, :reject_if=>:all_blank
   accepts_nested_attributes_for :addresses, :reject_if=>:all_blank
+  belongs_to :father, :class_name => 'Person'
+  belongs_to :mother, :class_name => 'Person'
   
   def name()
     first_name + ' ' + last_name
