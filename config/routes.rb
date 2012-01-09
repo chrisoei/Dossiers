@@ -1,4 +1,10 @@
 Dossiers::Application.routes.draw do
+  resources :addresses
+
+  resources :phone_numbers
+
+  resources :emails
+
   resources :people
 
   # The priority is based upon order of creation:
