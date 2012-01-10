@@ -1,0 +1,15 @@
+%p(id="notice")= notice
+
+%p
+  %b Person:
+  = @email.person_id
+%p
+  %b Name:
+  = @email.name
+%p
+  %b Address:
+  = @email.address
+
+= link_to 'Edit', edit_email_path(@email)
+|
+= link_to 'Back', emails_path

@@ -1,0 +1,22 @@
+%h1 Listing emails
+
+%table
+  %tr
+    %th Person
+    %th Name
+    %th Address
+    %th
+    %th
+    %th
+  - @emails.each do |email|
+    %tr
+      %td= email.person_id
+      %td= email.name
+      %td= email.address
+      %td= link_to 'Show', email
+      %td= link_to 'Edit', edit_email_path(email)
+      %td= link_to 'Destroy', email, confirm: 'Are you sure?', method: :delete
+
+<br />
+
+= link_to 'New Email', new_email_path
