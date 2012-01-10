@@ -10,6 +10,9 @@
   %b Last name:
   = @person.last_name
 %p
+  %b Identifier:
+  = @person.identifier
+%p
   %b Linkedin:
   = @person.linkedin
 %p
@@ -21,6 +24,26 @@
 %p
   %b Birthday:
   = @person.birthday
+- @person.phone_numbers.each do |x|
+  %p
+    %b= x.name
+    = x.number
+- @person.emails.each do |x|
+  %p
+    %b= x.name
+    = x.address
+- @person.addresses.each do |x|
+  %p
+    %b= x.name
+    %p= x.address1
+    - if x.address2
+      %p= x.address2
+    - if x.address3
+      %p= x.address3
+    - if x.address4
+      %p= x.address4
+    %p= "#{x.city}, #{x.state} #{x.zip}"
+    %p= x.country
 %p
   %b Notes:
   = @person.notes

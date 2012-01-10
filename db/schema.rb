@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120109233400) do
+ActiveRecord::Schema.define(:version => 20120110060230) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "person_id"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20120109233400) do
     t.datetime "updated_at"
     t.integer  "father_id"
     t.integer  "mother_id"
+    t.string   "identifier"
   end
 
   create_table "phone_numbers", :force => true do |t|
