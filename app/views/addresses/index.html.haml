@@ -3,7 +3,7 @@
 %table
   %tr
     %th Person
-    %th Name
+    %th Type
     %th Address1
     %th Address2
     %th Address3
@@ -17,7 +17,7 @@
     %th 
   -@addresses.each do |address|
     %tr
-      %td= address.person_id
+      %td= address.person.name
       %td= address.name
       %td= address.address1
       %td= address.address2
@@ -34,3 +34,4 @@
 <br />
 
 = link_to 'New Address', new_address_path
+= link_to 'People', people_path

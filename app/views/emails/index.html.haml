@@ -3,14 +3,14 @@
 %table
   %tr
     %th Person
-    %th Name
+    %th Email Type
     %th Address
     %th
     %th
     %th
   - @emails.each do |email|
     %tr
-      %td= email.person_id
+      %td= email.person.name
       %td= email.name
       %td= email.address
       %td= link_to 'Show', email
@@ -20,3 +20,4 @@
 <br />
 
 = link_to 'New Email', new_email_path
+= link_to 'People', people_path

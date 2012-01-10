@@ -3,14 +3,14 @@
 %table
   %tr
     %th Person
-    %th Name
+    %th Phone Type
     %th Number
     %th
     %th
     %th
   - @phone_numbers.each do |phone_number|
     %tr
-      %td= phone_number.person_id
+      %td= phone_number.person.name
       %td= phone_number.name
       %td= phone_number.number
       %td= link_to 'Show', phone_number
@@ -19,3 +19,4 @@
 <br />
 
 = link_to 'New Phone number', new_phone_number_path
+= link_to 'People', people_path
