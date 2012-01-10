@@ -17,7 +17,7 @@
     %th 
   -@addresses.each do |address|
     %tr
-      %td= address.person.display_name
+      %td= link_to address.person.display_name, person_path(address.person)
       %td= address.name
       %td= address.address1
       %td= address.address2
