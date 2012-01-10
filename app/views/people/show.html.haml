@@ -15,11 +15,11 @@
 - if @person.father
   %p
     %b Father:
-    = @person.father.display_name
+    = link_to @person.father.display_name, person_path(@person.father)
 - if @person.mother
   %p
     %b Mother:
-    = @person.mother.display_name
+    = link_to @person.mother.display_name, person_path(@person.mother)
 - if !@person.linkedin.blank?
   %p
     %b Linkedin:

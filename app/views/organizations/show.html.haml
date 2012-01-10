@@ -5,8 +5,8 @@
   = @organization.name
 - if @organization.parent
   %p
-    %b Supergroup:
-    = @organization.parent.display_name
+    %b Parent:
+    = link_to @organization.parent.display_name, organization_path(@organization.parent)
 %p
   %b Notes:
   = @organization.notes
