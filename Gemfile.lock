@@ -34,6 +34,7 @@ GEM
     authlogic (3.1.0)
       activerecord (>= 3.0.7)
       activerecord (>= 3.0.7)
+    bluecloth (2.2.0)
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -149,6 +150,7 @@ PLATFORMS
 
 DEPENDENCIES
   authlogic
+  bluecloth
   capybara
   coffee-rails (~> 3.1.1)
   formtastic

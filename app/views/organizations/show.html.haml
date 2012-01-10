@@ -9,7 +9,10 @@
     = link_to @organization.parent.display_name, organization_path(@organization.parent)
 %p
   %b Notes:
-  = @organization.notes
+  - if !@organization.notes.blank?
+    %hr
+    != BlueCloth.new(@organization.notes).to_html
+    %hr
 
 = link_to 'Edit', edit_organization_path(@organization)
 |

@@ -38,15 +38,15 @@
     = @person.birthday
 - @person.phone_numbers.each do |x|
   %p
-    %b= x.name
+    %b= "#{x.name}: "
     = x.number
 - @person.emails.each do |x|
   %p
-    %b= x.name
+    %b= "#{x.name}: "
     = x.address
 - @person.addresses.each do |x|
   %p
-    %b= x.name
+    %b= "#{x.name}: "
     %p= x.address1
     - if x.address2
       %p= x.address2
@@ -58,8 +58,10 @@
     %p= x.country
 %p
   %b Notes:
-  = @person.notes
-
+  - if !@person.notes.blank?
+    %hr
+    != BlueCloth.new(@person.notes).to_html
+    %hr
 = link_to 'Edit', edit_person_path(@person)
 |
 = link_to 'Back', people_path
