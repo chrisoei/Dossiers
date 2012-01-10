@@ -12,7 +12,7 @@
     %tr
       %td= link_to phone_number.person.display_name, person_path(phone_number.person)
       %td= phone_number.name
-      %td= phone_number.number
+      %td= phone_format(phone_number.number)
       %td= link_to 'Show', phone_number
       %td= link_to 'Edit', edit_phone_number_path(phone_number)
       %td= link_to 'Destroy', phone_number, confirm: 'Are you sure?', method: :delete

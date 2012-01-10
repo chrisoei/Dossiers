@@ -39,7 +39,7 @@
 - @person.phone_numbers.each do |x|
   %p
     %b= "#{x.name}: "
-    = x.number
+    = phone_format(x.number)
 - @person.emails.each do |x|
   %p
     %b= "#{x.name}: "

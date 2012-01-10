@@ -8,7 +8,7 @@
   = @phone_number.name
 %p
   %b Number:
-  = @phone_number.number
+  = phone_format(@phone_number.number)
 
 = link_to 'Edit', edit_phone_number_path(@phone_number)
 |
