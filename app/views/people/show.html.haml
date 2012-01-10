@@ -15,11 +15,11 @@
 - if @person.father
   %p
     %b Father:
-    = @person.father.name
+    = @person.father.display_name
 - if @person.mother
   %p
     %b Mother:
-    = @person.mother.name
+    = @person.mother.display_name
 - if !@person.linkedin.blank?
   %p
     %b Linkedin:

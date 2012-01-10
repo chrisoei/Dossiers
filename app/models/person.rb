@@ -8,7 +8,7 @@ class Person < ActiveRecord::Base
   belongs_to :father, :class_name => 'Person'
   belongs_to :mother, :class_name => 'Person'
   
-  def name()
+  def display_name()
     first_name + ' ' + last_name + " (" + id.to_s + ")"
   end
   
