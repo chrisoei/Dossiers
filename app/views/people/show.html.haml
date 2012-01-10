@@ -12,18 +12,30 @@
 %p
   %b Identifier:
   = @person.identifier
-%p
-  %b Linkedin:
-  = @person.linkedin
-%p
-  %b Facebook:
-  = @person.facebook
-%p
-  %b Skype:
-  = @person.skype
-%p
-  %b Birthday:
-  = @person.birthday
+- if @person.father
+  %p
+    %b Father:
+    = @person.father.name
+- if @person.mother
+  %p
+    %b Mother:
+    = @person.mother.name
+- if !@person.linkedin.blank?
+  %p
+    %b Linkedin:
+    = @person.linkedin
+- if !@person.facebook.blank?
+  %p
+    %b Facebook:
+    = @person.facebook
+- if !@person.skype.blank?
+  %p
+    %b Skype:
+    = @person.skype
+- if @person.birthday
+  %p
+    %b Birthday:
+    = @person.birthday
 - @person.phone_numbers.each do |x|
   %p
     %b= x.name
