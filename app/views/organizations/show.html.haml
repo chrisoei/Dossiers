@@ -3,9 +3,10 @@
 %p
   %b Name
   = @organization.name
-%p
-  %b Supergroup:
-  = @organization.supergroup
+- if @organization.parent
+  %p
+    %b Supergroup:
+    = @organization.parent.display_name
 %p
   %b Notes:
   = @organization.notes

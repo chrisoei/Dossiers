@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120110185338) do
+ActiveRecord::Schema.define(:version => 20120110191028) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "person_id"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20120110185338) do
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
-    t.integer  "supergroup"
+    t.integer  "parent_id"
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"

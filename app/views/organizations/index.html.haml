@@ -2,20 +2,21 @@
 
 %table
   %tr
+    %th ID
     %th Name
     %th Supergroup
-    %th Notes
     %th
     %th
     %th
   - @organizations.each do |organization|
     %tr
+      %td= organization.id
       %td= organization.name
-      %td= organization.supergroup
-      %td= organization.notes
+      %td= organization.parent.display_name if organization.parent
       %td= link_to 'Show', organization
       %td= link_to 'Edit', edit_organization_path(organization)
       %td= link_to 'Destroy', organization, confirm: 'Are you sure?', method: :delete
 %br
 = link_to 'New Organization', new_organization_path
+%br
 = link_to 'People', people_path
