@@ -1,0 +1,16 @@
+%p(id="notice")= notice
+
+%p
+  %b Name
+  = @organization.name
+%p
+  %b Supergroup:
+  = @organization.supergroup
+%p
+  %b Notes:
+  = @organization.notes
+
+= link_to 'Edit', edit_organization_path(@organization)
+|
+= link_to 'Back', organizations_path
+

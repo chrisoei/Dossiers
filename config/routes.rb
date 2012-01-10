@@ -1,4 +1,6 @@
 Dossiers::Application.routes.draw do
+  resources :organizations
+
   resources :addresses
 
   resources :phone_numbers
