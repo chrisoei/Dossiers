@@ -10,7 +10,7 @@
     %th
   - @emails.each do |email|
     %tr
-      %td= email.person.name
+      %td= email.person.display_name
       %td= email.name
       %td= email.address
       %td= link_to 'Show', email

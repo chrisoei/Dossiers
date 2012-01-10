@@ -10,7 +10,7 @@
     %th
   - @phone_numbers.each do |phone_number|
     %tr
-      %td= phone_number.person.name
+      %td= phone_number.person.display_name
       %td= phone_number.name
       %td= phone_number.number
       %td= link_to 'Show', phone_number
