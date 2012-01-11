@@ -23,11 +23,11 @@
 - if !@person.linkedin.blank?
   %p
     %b Linkedin:
-    = @person.linkedin
+    = link_to @person.linkedin, @person.linkedin
 - if !@person.facebook.blank?
   %p
     %b Facebook:
-    = @person.facebook
+    = link_to @person.facebook, @person.facebook
 - if !@person.skype.blank?
   %p
     %b Skype:
