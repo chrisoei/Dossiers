@@ -11,7 +11,7 @@
   %b Notes:
   - if !@organization.notes.blank?
     %hr
-    != BlueCloth.new(@organization.notes).to_html
+    != BlueCloth.new(note_markup(@organization.notes)).to_html
     %hr
 
 = link_to 'Edit', edit_organization_path(@organization)

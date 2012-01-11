@@ -60,7 +60,7 @@
   %b Notes:
   - if !@person.notes.blank?
     %hr
-    != BlueCloth.new(@person.notes).to_html
+    != BlueCloth.new(note_markup(@person.notes)).to_html
     %hr
 = link_to 'Edit', edit_person_path(@person)
 |
