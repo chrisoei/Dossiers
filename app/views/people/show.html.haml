@@ -43,7 +43,7 @@
 - @person.emails.each do |x|
   %p
     %b= "#{x.name}: "
-    = x.address
+    = mail_to x.address
 - @person.addresses.each do |x|
   %p
     %b= "#{x.name}: "
