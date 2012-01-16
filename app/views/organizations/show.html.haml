@@ -6,7 +6,7 @@
 - if @organization.parent
   %p
     %b Parent:
-    = link_to @organization.parent.display_name, organization_path(@organization.parent)
+    = link_to @organization.parent.display_name, organization_path(@organization.parent), :class => 'organization'
 %p
   %b Notes:
   - if !@organization.notes.blank?

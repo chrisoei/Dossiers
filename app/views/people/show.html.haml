@@ -15,11 +15,11 @@
 - if @person.father
   %p
     %b Father:
-    = link_to @person.father.display_name, person_path(@person.father)
+    = link_to @person.father.display_name, person_path(@person.father), :class => 'person'
 - if @person.mother
   %p
     %b Mother:
-    = link_to @person.mother.display_name, person_path(@person.mother)
+    = link_to @person.mother.display_name, person_path(@person.mother), :class => 'person'
 - if !@person.linkedin.blank?
   %p
     %b Linkedin:
