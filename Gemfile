@@ -39,3 +39,7 @@ group :test do
   gem 'turn', '0.8.2', :require => false
   gem 'capybara'
 end
+
+group :development do
+  gem 'taps'
+end
