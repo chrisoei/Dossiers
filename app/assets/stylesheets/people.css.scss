@@ -2,14 +2,18 @@
 a.person:link, a.person:visited {
   color: #9B30FF;
   border: solid 2px transparent;
+  padding: 1px;
 }
 
 a.person:hover {
+  color: #9B30FF;
   border: solid 2px #4B0082;
   background-color: #fff;
+  padding: 1px;
 }
 
 a.person:active {
   border: solid 2px #4B0082;
   background-color: #E066FF;
+  padding: 1px;
 }
