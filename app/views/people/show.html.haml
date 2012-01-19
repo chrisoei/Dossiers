@@ -38,15 +38,15 @@
     = @person.birthday
 - @person.phone_numbers.each do |x|
   %p
-    %b= "#{x.name}: "
+    %b= "Phone (#{x.name}): "
     = phone_format(x.number)
 - @person.emails.each do |x|
   %p
-    %b= "#{x.name}: "
+    %b= "Email (#{x.name}): "
     = mail_to x.address
 - @person.addresses.each do |x|
   %p
-    %b= "#{x.name}: "
+    %b= "Address (#{x.name}): "
     %p= x.address1
     - if x.address2
       %p= x.address2
