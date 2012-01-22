@@ -10,7 +10,7 @@
     %th
   - @emails.each do |email|
     %tr
-      %td= link_to email.person.display_name, person_path(email.person)
+      %td= link_to email.person.display_name, person_path(email.person), :class=>'person'
       %td= email.name
       %td= email.address
       %td= link_to 'Show', email
