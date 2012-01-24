@@ -2,7 +2,7 @@
 
 %p
   %b Person:
-  = @email.person_id
+  = link_to @email.person.display_name, person_path(@email.person), :class => 'person'
 %p
   %b Name:
   = @email.name

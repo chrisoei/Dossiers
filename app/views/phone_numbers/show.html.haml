@@ -2,7 +2,7 @@
 
 %p
   %b Person:
-  = @phone_number.person_id
+  = link_to @phone_number.person.display_name, person_path(@phone_number.person), :class => 'person'
 %p
   %b Name:
   = @phone_number.name

@@ -1,7 +1,7 @@
 %p(id="notice")= notice
 %p
   %b Person:
-  = @address.person_id
+  = link_to @address.person.display_name, person_path(@address.person), :class => 'person'
 %p
   %b Name:
   = @address.name
