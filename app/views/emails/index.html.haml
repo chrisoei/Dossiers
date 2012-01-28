@@ -9,7 +9,7 @@
     %th
     %th
   - @emails.each do |email|
-    %tr
+    %tr{:class => cycle('list_line_odd','list_line_even')}
       %td= link_to email.person.display_name, person_path(email.person), :class=>'person'
       %td= email.name
       %td= email.address

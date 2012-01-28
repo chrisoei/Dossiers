@@ -9,7 +9,7 @@
     %th
     %th
   - @organizations.each do |organization|
-    %tr
+    %tr{:class => cycle('list_line_odd','list_line_even')}
       %td= organization.id
       %td= organization.name
       %td= link_to organization.parent.display_name, organization_path(organization.parent), :class=>'organization' if organization.parent

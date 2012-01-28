@@ -16,7 +16,7 @@
     %th 
     %th 
   -@addresses.each do |address|
-    %tr
+    %tr{:class => cycle('list_line_odd','list_line_even')}
       %td= link_to address.person.display_name, person_path(address.person), :class => 'person'
       %td= address.name
       %td= address.address1

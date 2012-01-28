@@ -9,7 +9,7 @@
     %th
     %th
   - @phone_numbers.each do |phone_number|
-    %tr
+    %tr{:class => cycle('list_line_odd','list_line_even')}
       %td= link_to phone_number.person.display_name, person_path(phone_number.person), :class=>'person'
       %td= phone_number.name
       %td= phone_format(phone_number.number)

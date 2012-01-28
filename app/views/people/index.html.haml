@@ -10,7 +10,7 @@
     %th
     %th
   - @people.each do |person|
-    %tr
+    %tr{:class => cycle('list_line_odd','list_line_even')}
       %td= person.id
       %td= person.first_name
       %td= person.middle_name
