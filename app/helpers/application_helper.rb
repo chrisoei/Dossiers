@@ -1,13 +1,12 @@
 module ApplicationHelper
   def note_markup(s)
-    while s =~ /\(p#(\d+)\)/
-      pid = $1
-      s.sub!(/\(p#\d+\)/,"<a href='/people/#{pid}' class='person'>#{Person.find(pid).display_name}</a>")
-    end
-    while s =~ /\(o#(\d+)\)/
-      oid = $1
-      s.sub!(/\(o#\d+\)/,"<a href='/organizations/#{oid}' class='organization'>#{Organization.find(oid).display_name}</a>")
-    end
-    s
+    
+    s.gsub(/\(p#(\d+)\)/) {
+      person = Person.find($1)
+      link_to person.display_name, person_path(person), :class => 'person'
+    }.gsub(/\(o#(\d+)\)/) {
+      organization = Organization.find($1)
+      link_to organization.display_name, organization_path(organization), :class => 'organization'
+    }
   end
 end
