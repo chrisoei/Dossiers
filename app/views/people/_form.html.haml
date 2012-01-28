@@ -4,8 +4,8 @@
     = f.input :middle_name
     = f.input :last_name
     = f.input :identifier
-    = f.input :father
-    = f.input :mother
+    = f.input :father, :collection => Person.find(:all, :order => "last_name ASC")
+    = f.input :mother, :collection => Person.find(:all, :order => "last_name ASC")
     = f.input :linkedin
     = f.input :facebook
     = f.input :skype
