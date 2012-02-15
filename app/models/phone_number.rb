@@ -5,6 +5,6 @@ class PhoneNumber < ActiveRecord::Base
 
   private
     def strip_spaces
-      self.number = self.number.gsub(/\s+/,'')
+      self.number = self.number.gsub(/\s+/,'') if self.number
     end
 end

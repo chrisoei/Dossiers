@@ -12,7 +12,8 @@ describe PhoneNumber do
 
   it 'should strip spaces before saving' do
     a = PhoneNumber.new(:number => '1 415 238 1138')
-    a.save
+    a.person = Person.create
+    a.save!
     a.number.should == '14152381138'
   end
 end
