@@ -7,7 +7,8 @@ class Person < ActiveRecord::Base
   accepts_nested_attributes_for :addresses, :reject_if=>:all_blank
   belongs_to :father, :class_name => 'Person'
   belongs_to :mother, :class_name => 'Person'
-  
+  scope :order_by_last_name, order('last_name asc')
+
   def display_name()
     "#{first_name} #{last_name} (#{id.to_s})"
   end
